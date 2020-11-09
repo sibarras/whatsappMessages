@@ -1,8 +1,6 @@
 from twilio.rest import Client
-from secrets import sender, destination
+from secrets import sender, destination, account_sid, auth_token
 
-account_sid = 'AC2cf233f0577912ef99ce6e806688eed8'
-auth_token = 'f2668198a6ca8fd008791858e9ae983a'
 client = Client(account_sid, auth_token)
 
 def whatsapp_message(message_to_send:str, destination=destination, sender=sender):
